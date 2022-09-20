@@ -41,8 +41,8 @@ body {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  color: #ffff;
-  background-color: #1b1b1b;
+  color: #ffffff;
+  background-color: #000000;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -74,9 +74,10 @@ body {
   height: 28px;
   left: calc(50% - 508px / 2);
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 15px;
   letter-spacing: 10%;
   font-weight: 700;
+  color: rgb(255, 255, 255);
 }
 
 .main-block__title {
@@ -104,7 +105,7 @@ body {
   position: fixed;
   box-sizing: border-box;
   width: 100%;
-  background-color: #212121;
+  background-color: #000000;
   color: #fff;
   z-index: 100;
   opacity: 0.98;
@@ -128,7 +129,7 @@ body {
   padding: 0;
 }
 
-.menu > li {
+.menu>li {
   margin: 0 1rem;
   overflow: hidden;
 }
@@ -169,16 +170,16 @@ body {
   margin-top: 8px;
 }
 
-#menu-toggle:checked + .menu-button-container .menu-button::before {
+#menu-toggle:checked+.menu-button-container .menu-button::before {
   margin-top: 0px;
   transform: rotate(405deg);
 }
 
-#menu-toggle:checked + .menu-button-container .menu-button {
+#menu-toggle:checked+.menu-button-container .menu-button {
   background: #212121;
 }
 
-#menu-toggle:checked + .menu-button-container .menu-button::after {
+#menu-toggle:checked+.menu-button-container .menu-button::after {
   margin-top: 0px;
   transform: rotate(-405deg);
 }
@@ -189,18 +190,20 @@ body {
 }
 
 .main-block__container {
-  background-image: url(/img/back.jpg);
+  background-image: url(/img/12.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
-  padding-top: 117px;
-  padding-bottom: 5%;
+  padding-top: 50px;
+  padding-bottom: 1%;
+  max-width: 100%;
+  height: auto;
 }
 
 .main-block__body {
   z-index: 2;
   text-align: center;
   padding: 100px;
-  margin: 50px;
+  margin: 250px;
 }
 
 .main-block__text {
@@ -255,12 +258,13 @@ body {
   display: flex;
   flex-direction: row;
   gap: 3%;
-  margin-top: 5.8%;
+  margin-top: 6%;
 }
 
 .fluid-imag {
-  width: 35.9%;
-  height: 35.9%;
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
 }
 
 .about-content {
@@ -301,7 +305,7 @@ body {
 .social-icons-about {
   display: flex;
   flex-direction: row;
-  gap: 8%;
+  gap: 2%;
   margin-bottom: 1.4%;
 }
 
@@ -338,6 +342,7 @@ body {
 .img-fluid {
   margin: 10px;
   padding: 10px;
+  border-radius: 4%;
 }
 
 /* ................Gallery Page................. */
@@ -349,7 +354,7 @@ body {
 }
 
 .gallery-title {
-  font-size: 72px;
+  font-size: 30px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   line-height: 427.3%;
@@ -418,7 +423,7 @@ a:hover {
   justify-content: space-around;
   align-items: center;
   padding: 1.5% 0% 1.5% 0%;
-  background: #282323;
+  background: #000000;
 }
 
 .social-icons {
@@ -426,11 +431,6 @@ a:hover {
   justify-content: space-around;
   align-items: center;
   gap: 50%;
-}
-
-.footer__logo {
-  width: 5%;
-  height: 5%;
 }
 
 /* ..............@media................. */
@@ -455,11 +455,6 @@ a:hover {
 
   .aboutme-main {
     margin-top: 10%;
-  }
-
-  .footer__logo {
-    width: 8% !important;
-    height: 8% !important;
   }
 
   .rights {
@@ -517,7 +512,7 @@ a:hover {
     align-items: center;
   }
 
-  #menu-toggle ~ .menu li {
+  #menu-toggle~.menu li {
     height: 0;
     margin: 0;
     padding: 0;
@@ -525,24 +520,24 @@ a:hover {
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
 
-  #menu-toggle:checked ~ .menu li {
+  #menu-toggle:checked~.menu li {
     border: 1px solid #f65282;
     height: 2.5em;
     padding: 0.5em;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
 
-  .menu > li {
+  .menu>li {
     display: flex;
     justify-content: center;
     padding: 0.5em 0;
     width: 100%;
     color: white;
-    background-color: #222;
+    background-color: rgb(70, 70, 70);
     opacity: 0.9;
   }
 
-  .menu > li:not(:last-child) {
+  .menu>li:not(:last-child) {
     border-bottom: 1px solid #444;
   }
 
@@ -551,8 +546,8 @@ a:hover {
   }
 
   .header__logo {
-    margin: 0px !important;
-    padding: 0px !important;
+    margin: 10px !important;
+    padding: 10px !important;
   }
 
   .gallery {
@@ -602,11 +597,6 @@ a:hover {
     left: calc(50% - 320px / 2) !important;
   }
 
-  .footer__logo {
-    width: 8%;
-    height: 8%;
-  }
-
   .footer {
     margin-bottom: 3.5%;
   }
@@ -651,6 +641,7 @@ a:hover {
 }
 
 @media (max-width: 479px) {
+
   ._item1,
   ._item2 {
     display: none;
